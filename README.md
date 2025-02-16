@@ -12,7 +12,7 @@ O código está estruturado de forma modular, seguindo o paradigma de **programa
 Antes de executar o programa, siga as etapas abaixo para garantir um funcionamento correto:  
 
 1. **Obtenha as imagens no formato PGM**  
-   - Faça o download da pasta contendo as imagens no formato **PGM**. Caso os arquivos estejam em outro formato, utilize um programa como o **GIMP** para convertê-los corretamente.  
+   - Faça o download da pasta contendo as imagens no formato **PGM P5 (Binário)**. Caso os arquivos estejam em outro formato, utilize um programa como o **GIMP** para convertê-los corretamente.  
 
 2. **Configure o diretório das imagens**  
    - No arquivo `main.c`, defina o **caminho correto** para o diretório onde as imagens estão armazenadas.  
@@ -36,6 +36,7 @@ Antes de executar o programa, siga as etapas abaixo para garantir um funcionamen
      ```
      Esse comando compila os arquivos necessários, ativando alertas e opções de depuração para facilitar a identificação de possíveis erros.
      Obs: Não se esqueça de instalar nas extensões o MakeFile para inserir o código make all
+     Obs 2: O código lerPGM só aceita imagens do tipo P5. Se houver imagens P2 ou com cabeçalhos corrompidos, elas não serão carregadas.
 
 4. **Execução e saída do programa**  
    - Após a execução, o programa criará uma **nova pasta de saída**, denominada por padrão **"Carcinoma_out"**.  
