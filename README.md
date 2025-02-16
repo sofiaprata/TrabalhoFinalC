@@ -20,9 +20,22 @@ Antes de executar o programa, siga as etapas abaixo para garantir um funcionamen
 3. **Compilação do código**  
    - Para compilar o programa, utilize o seguinte comando no terminal:  
      ```sh
-     gcc -Wall -Wextra -g3 utilidades.c imagem.c kmeans.c -o output/utilidades.exe
+     make all
      ```
-     Esse comando compila os arquivos necessários, ativando alertas e opções de depuração para facilitar a identificação de possíveis erros.  
+     - Caso esteja compilando no Windows:
+     ```sh
+     mingw32-make all
+     ```
+     Entre na pasta output ainda no terminal:
+     ```sh
+     cd C:\Users\seu\terminal\output
+     ```
+     e dentro da pasta digite para executar o programa:
+     ```sh
+     .\completo.exe
+     ```
+     Esse comando compila os arquivos necessários, ativando alertas e opções de depuração para facilitar a identificação de possíveis erros.
+     Obs: Não se esqueça de instalar nas extensões o MakeFile para inserir o código make all
 
 4. **Execução e saída do programa**  
    - Após a execução, o programa criará uma **nova pasta de saída**, denominada por padrão **"Carcinoma_out"**.  
