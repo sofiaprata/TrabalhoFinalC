@@ -5,7 +5,7 @@ CC = gcc
 CFLAGS = -Wall -Wextra -g3
 
 # Lista de arquivos-fonte
-SRCS = main.c utilidades.c imagem.c kmeans.c
+SRCS = main.c processamento.c imagem.c kmeans.c
 
 # Nome do executável
 OUT = output/completo.exe
