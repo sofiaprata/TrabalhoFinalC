@@ -1,25 +1,39 @@
-# Trabalho Final - Laboratório de Programação (IFCE)
+# **Trabalho Final - Laboratório de Programação**  
+**Instituto Federal de Educação, Ciência e Tecnologia do Ceará (IFCE)**  
 
-## 🖥 Linguagem: C  
-Este projeto realiza a **clusterização de imagens** provenientes de exames de **Papanicolau**, utilizando:  
-- O **algoritmo K-means**  
-- **Análise de silhueta**  
-- Um **leitor de imagens PGM** (Textual P2 ou Binário P5)  
+## **Descrição do Projeto**  
+Este projeto tem como objetivo a **clusterização de imagens médicas** provenientes de exames de Papanicolau. O processo utiliza o algoritmo **K-means**, a **análise de silhueta** e um **leitor de imagens no formato PGM** (Textual P2 ou Binário P5).  
 
-O código segue a organização **linkedizada** para maior modularidade.
+O código está estruturado de forma modular, seguindo o paradigma de **programação ligada (linkedizada)**, garantindo maior organização e reusabilidade das funções implementadas.  
 
 ---
 
-## 📌 Instruções
+## **Requisitos e Preparação**  
+Antes de executar o programa, siga as etapas abaixo para garantir um funcionamento correto:  
 
-### 🔹 1. Preparação
-1. Faça o **download da pasta** contendo todas as imagens no formato **PGM**.  
-   - Se estiver em outro formato, utilize um programa como **GIMP** para convertê-las para **PGM (P5)**.  
+1. **Obtenha as imagens no formato PGM**  
+   - Faça o download da pasta contendo as imagens no formato **PGM**. Caso os arquivos estejam em outro formato, utilize um programa como o **GIMP** para convertê-los corretamente.  
 
-2. **Atualize o caminho da pasta** no arquivo `main.c`.  
+2. **Configure o diretório das imagens**  
+   - No arquivo `main.c`, defina o **caminho correto** para o diretório onde as imagens estão armazenadas.  
 
-### 🔹 2. Compilação
-Para compilar o programa, utilize o seguinte comando no terminal:  
+3. **Compilação do código**  
+   - Para compilar o programa, utilize o seguinte comando no terminal:  
+     ```sh
+     gcc -Wall -Wextra -g3 utilidades.c imagem.c kmeans.c -o output/utilidades.exe
+     ```
+     Esse comando compila os arquivos necessários, ativando alertas e opções de depuração para facilitar a identificação de possíveis erros.  
 
-```sh
-gcc -Wall -Wextra -g3 utilidades.c imagem.c kmeans.c -o output/utilidades.exe
+4. **Execução e saída do programa**  
+   - Após a execução, o programa criará uma **nova pasta de saída**, denominada por padrão **"Carcinoma_out"**.  
+   - Todas as imagens processadas e clusterizadas estarão armazenadas nesta pasta para análise posterior.  
+
+---
+
+## **Referências e Links Úteis**  
+- **Banco de imagens de exames de Papanicolau:**  
+  [MDE-Lab - Aegean University](https://mde-lab.aegean.gr/index.php/downloads/)  
+
+- **Métrica DICE (avaliação de segmentação de imagens):**  
+  [ISBI 2014 Challenge - Universidade de Adelaide](https://cs.adelaide.edu.au/~carneiro/isbi14_challenge/)  
+
