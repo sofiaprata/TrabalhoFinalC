@@ -12,7 +12,11 @@ void kmeans(PGM *pgm, int k, int *clusters) {
     int soma[k], count[k];
     
     srand(time(NULL));
-    for (int i = 0; i < k; i++) centroides[i] = rand() % 256;
+    
+    // Inicializa os centroides com valores aleatórios dos pixels da imagem
+    for (int i = 0; i < k; i++) {
+        centroides[i] = pgm->imagem[rand() % (pgm->largura * pgm->altura)];
+    }
     
     for (int iter = 0; iter < MAX_ITER; iter++) {
         memset(soma, 0, k * sizeof(int));
@@ -59,4 +63,3 @@ void kmeans(PGM *pgm, int k, int *clusters) {
         }
     }
 }
-
